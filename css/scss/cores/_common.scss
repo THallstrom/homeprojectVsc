@@ -15,9 +15,36 @@ a {
   @include font-standard;
   color: var(--color-theme);
   font-size: 1em;
-  text-decoration: none;
+  display: inline-block;
+
+  &:active,
+  &:visited,
+  &:focus,
+  &:hover {
+    color: var(--color-theme);
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 button {
   @include font-standard;
+}
+
+/* Example styles for .nav-link */
+.nav-link {
+  @include font-semibold;
+  color: var(--color-gray-900) !important;
+  font-size: 1em;
+  display: inline-block;
+  text-decoration: none; /* Added for consistency */
+  
+  &:active,
+  &.active,
+  &:hover {
+    color: var(--color-theme) !important;
+    text-decoration: underline;
+  }
 }
